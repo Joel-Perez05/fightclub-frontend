@@ -1,0 +1,14 @@
+NavLink {
+    color: #eee;
+    text-decoration: none;
+    margin-right: 0.5rem;
+}
+
+Nav:hover {
+    color: gray;
+}
+
+.active {
+    color: black;
+    font-weight: bold;
+}
