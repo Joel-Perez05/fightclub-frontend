@@ -18,7 +18,7 @@ const EventNew = (props) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8000/api/events", {
+        axios.post("http://fightclub-api.onrender.com/api/events", {
             name,
             game,
             startDate,

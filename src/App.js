@@ -4,7 +4,7 @@ import ThemeButton from "../src/components/ThemeButton";
 import axios from "axios";
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {HashRouter, Routes, Route} from "react-router-dom";
 import Events from "./components/Events";
 import Header from "./components/Header";
 import EventNew from "./components/EventNew";
@@ -37,7 +37,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div style={{height: "1292px"}} className={`bg ${darkMode ? "bg-dark" : "bg-light"}`}>
         <Header userStatus={userStatus} setUserStatus={setUserStatus} isLoggedin={isLoggedin} setIsLoggedin={setIsLoggedin} />
         <ThemeButton />
@@ -50,7 +50,7 @@ function App() {
           <Route element={<Register setIsLoggedin={setIsLoggedin} />} path="/register" />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

@@ -12,7 +12,7 @@ const Events = (props) => {
     const {user, organizerEmail, userStatus} = props;
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/events")
+        axios.get("http://fightclub-api.onrender.com/api/events")
             .then((res) => {
                 // console.log(user.email);
                 // console.log(organizerEmail)
@@ -22,7 +22,7 @@ const Events = (props) => {
     }, []);
 
     const handleDelete = (eventId) => {
-        axios.delete("http://localhost:8000/api/events/" + eventId)
+        axios.delete("http://fightclub-api.onrender.com/api/events/" + eventId)
             .then((res) => {
                 console.log(res.data);
                 const remainingEvents = events.filter((event) => {

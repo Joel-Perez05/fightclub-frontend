@@ -25,7 +25,7 @@ const Login = (props) => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8000/login", user, {withCredentials: true})
+        axios.post("http://fightclub-api.onrender.com/login", user, {withCredentials: true})
             .then((res) => {
                 console.log(res.data.successMessage);
                 setIsLoggedin(true);

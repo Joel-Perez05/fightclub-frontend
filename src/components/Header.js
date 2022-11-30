@@ -15,7 +15,7 @@ const Header = (props) => {
     // const [user, setUser] = useState(null);
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/current-user", {withCredentials: true})
+        axios.get("http://fightclub-api.onrender.com/api/current-user", {withCredentials: true})
             .then((res) => {
                 // console.log(res.data);
                 setUserStatus(res.data);
@@ -26,7 +26,7 @@ const Header = (props) => {
     }, [isLoggedin]);
 
     const handleLogout = () => {
-        axios.post("http://localhost:8000/logout",{}, {withCredentials: true})
+        axios.post("http://fightclub-api.onrender.com/logout",{}, {withCredentials: true})
             .then((res) => {
                 // console.log(res.data);
                 setUserStatus(null);

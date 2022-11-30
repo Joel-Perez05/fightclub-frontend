@@ -19,7 +19,7 @@ const EventEdit = (props) => {
     const [errors, setErrors] = useState({});
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/events/" + id)
+        axios.get("http://fightclub-api.onrender.com/api/events/" + id)
             .then((res) => {
                 console.log(res.data);
                 setCurrentName(res.data.name);
@@ -37,7 +37,7 @@ const EventEdit = (props) => {
     
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.put("http://localhost:8000/api/events/" + id, {
+        axios.put("http://fightclub-api.onrender.com/api/events/" + id, {
             name,
             game,
             startDate,

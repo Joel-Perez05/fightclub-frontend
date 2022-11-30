@@ -14,7 +14,7 @@ const EventDetails = (props) => {
     const [eventCreator, setEventCreator] = useState({})
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/events/" + id)
+        axios.get("http://fightclub-api.onrender.com/api/events/" + id)
             .then((res) => {
                 // console.log(res.data.createdBy.email);
                 setSingleEvent(res.data);
